@@ -32,6 +32,8 @@
         "ssdci-ess-form":		            {url:"$A/modules/ess-form.html",Table:"ssdci-ess",task_name:"Epworth Sleepiness Scale"},
         "ssdci-isi-data":		            {url:"$A/modules/isi-data.html",Table:"ssdci-isi",form_module:"ssdci-isi-form"},
         "ssdci-isi-form":		            {url:"$A/modules/isi-form.html",Table:"ssdci-isi",task_name:"Insomnia Severity Index (ISI)"},
+        "ssdci-psqi-data":		            {url:"$A/modules/psqi-data.html",Table:"ssdci-psqi",form_module:"ssdci-psqi-form"},
+        "ssdci-psqi-form":		            {url:"$A/modules/psqi-form.html",Table:"ssdci-psqi",task_name:"Pittsburgh Sleep Quality Index (PSQI)"},
         "ssdci-stop-bang-data":		        {url:"$A/modules/stop-bang-data.html",Table:"ssdci-stop-bang",form_module:"ssdci-stop-bang-form"},
         "ssdci-stop-bang-form":		        {url:"$A/modules/stop-bang-form.html",Table:"ssdci-stop-bang",task_name:"Stop-BANG"},
         "ssdci-gds-data":		            {url:"$A/modules/gds-data.html",Table:"ssdci-gds",form_module:"ssdci-gds-form"},
