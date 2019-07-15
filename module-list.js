@@ -38,6 +38,8 @@
         "ssdci-psqi-form":		            {url:"$H/m/psqi-form.html",Table:"ssdci-psqi",task_name:"Pittsburgh Sleep Quality Index (PSQI)"},
         "ssdci-stop-bang-data":		        {url:"$H/m/stop-bang-data.html",Table:"ssdci-stop-bang",form_module:"ssdci-stop-bang-form",task_name:"Stop-Bang"},
         "ssdci-stop-bang-form":		        {url:"$H/m/stop-bang-form.html",Table:"ssdci-stop-bang",task_name:"Stop-BANG"},
+        "ssdci-fosq-data":		            {url:"$H/m/fosq-data.html",Table:"ssdci-fosq",form_module:"ssdci-fosq-form",task_name:"Functional Outcomes of Sleep Disorders Questionnaire (FOSQ-10)"},
+        "ssdci-fosq-form":		            {url:"$H/m/fosq-form.html",Table:"ssdci-fosq",task_name:"Functional Outcomes of Sleep Disorders Questionnaire (FOSQ-10)"},
         "ssdci-gds-data":		            {url:"$H/m/gds-data.html",Table:"ssdci-gds",form_module:"ssdci-gds-form",task_name:"Geriatric Depression Scale"},
         "ssdci-gds-form":		            {url:"$H/m/gds-form.html",Table:"ssdci-gds",task_name:"Geriatric Depression Scale"},
         "ssdci-hads-data":		            {url:"$H/m/hads-data.html",Table:"ssdci-hads",form_module:"ssdci-hads-form",task_name:"Hospital Anxiety and Depression Questionnaire (HADS)"},
