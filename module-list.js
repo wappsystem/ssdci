@@ -52,6 +52,8 @@
         "ssdci-concom-medication-data":		{url:"$H/m/concom-medication-data.html",Table:"ssdci-concom-medication",form_module:"ssdci-concom-medication-form",task_name:"Concomitant Medication Form"},
         "ssdci-concom-medication-form":		{url:"$H/m/concom-medication-form.html",Table:"ssdci-concom-medication"},
 
+        "ssdci-neurocog-data":		        {url:"$H/m/neurocog-data.html",Table:"ssdci-neurocog",form_module:"ssdci-neurocog-form",task_name:"Neuro Cognetive Battery Scores"},
+        "ssdci-neurocog-form":		        {url:"$H/m/neurocog-form.html",Table:"ssdci-neurocog"},
         "ssdci-moca-data":		            {url:"$H/m/moca-data.html",Table:"ssdci-moca",form_module:"ssdci-moca-form",task_name:"Montreal Cognitive Assessment (MoCA)"},
         "ssdci-moca-form":		            {url:"$H/m/moca-form.html",Table:"ssdci-moca"},
         "ssdci-stroop-data":		        {url:"$H/m/stroop-data.html",Table:"ssdci-stroop",form_module:"ssdci-stroop-form",task_name:"Stroop Colour and Text Test"},

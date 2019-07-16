@@ -74,7 +74,7 @@
                                        <span class="check_checkmark"></span> K. Other</label><br>
                            <div id=specify__ID>
                                <label for="firstName">(please specify)</label>
-                               <input type="text" class="form-control" name="ethnicity_other" id="ethnicity_other__ID"  required >
+                               <input type="text" class="form-control" name="ethnicity_other" id="ethnicity_other__ID"   >
                            </div>
                              <label class="checkboxes">
                                      <input type="checkbox" name="ethnicity_11" id="ethnicity_11__ID">
@@ -86,7 +86,7 @@
                      <h4>Country of Birth</h4>
                     <fieldset class="">
                         <label ><span class="">In which country were you born?</span>
-                            <input type=text name="COB" class=form-control required />
+                            <input type=text name="COB" class=form-control  />
                         </label><br>
                      </fieldset>
                  </div>
@@ -108,10 +108,10 @@
                 load2();
                 if($('#ethnicity_10__ID').is(":checked")==true ){
                     $('#specify__ID').show() ;
-                    $('#ethnicity_other__ID').prop('required', true);
+                    $('#ethnicity_other__ID').prop('', true);
                 }
                 else {
-                    $('#ethnicity_other__ID').prop('required',false);
+                    $('#ethnicity_other__ID').prop('',false);
                     $('#specify__ID').hide();
                 }
             }
@@ -119,10 +119,10 @@
             $('#ethnicity_10__ID').on('click', function(){
                 if($('#ethnicity_10__ID').is(":checked")==true ){
                     $('#specify__ID').show() ;
-                    $('#ethnicity_other__ID').prop('required', true);
+                    $('#ethnicity_other__ID').prop('', true);
                 }
                 else {
-                    $('#ethnicity_other__ID').prop('required',false);
+                    $('#ethnicity_other__ID').prop('',false);
                     $('#specify__ID').hide();
                 }
             })

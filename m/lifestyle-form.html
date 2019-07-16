@@ -28,7 +28,7 @@
       				<div class="questiongroup ">
                           <fieldset class="subquestions">
                               <label class="radiobuttons">
-                                <input type="radio" name="general_health" value="4" required>
+                                <input type="radio" name="general_health" value="4" >
                                 <span class="checkmark"></span> Excellent</label><br>
                               <label class="radiobuttons">
                                 <input type="radio" name="general_health" value="3">
@@ -51,7 +51,7 @@
                    <div class="questiongroup ">
                          <fieldset class="">
                              <label class="radiobuttons">
-                               <input type="radio" name="physical_activity" value="0" required>
+                               <input type="radio" name="physical_activity" value="0" >
                                <span class="checkmark"></span> Never</label><br>
                              <label class="radiobuttons">
                                <input type="radio" name="physical_activity" value="1">
@@ -74,7 +74,7 @@
                   <div class="questiongroup ">
                         <fieldset class="subquestions">
                             <label class="radiobuttons">
-                              <input type="radio" name="smoke" id="smoke__ID" value="0" required>
+                              <input type="radio" name="smoke" id="smoke__ID" value="0" >
                               <span class="checkmark"></span> No</label><br>
                             <label class="radiobuttons">
                               <input type="radio" name="smoke" value="1">
@@ -88,7 +88,7 @@
                  <div class="questiongroup ">
                        <fieldset class="subquestions">
                            <label class="radiobuttons">
-                             <input type="radio" name="smoke_regular" id="smoke_regular__ID" value="0" required>
+                             <input type="radio" name="smoke_regular" id="smoke_regular__ID" value="0" >
                              <span class="checkmark"></span> No</label><br>
                            <label class="radiobuttons">
                              <input type="radio" name="smoke_regular" value="1">
@@ -132,7 +132,7 @@
                    <div class="questiongroup ">
                          <fieldset class="subquestions">
                              <label class="radiobuttons">
-                               <input type="radio" name="alcohol" id="alcohol__ID" value="0" required>
+                               <input type="radio" name="alcohol" id="alcohol__ID" value="0" >
                                <span class="checkmark"></span>0 days / do not drink alcohol
                              </label><br>
                              <label class="radiobuttons">
@@ -173,7 +173,7 @@
                       <h4>Workday(s)</h4>
                         <fieldset class="subquestions">
                             <label class="radiobuttons">
-                              <input type="radio" name="alcohol_standard_wd" id="alcohol_standard_wd__ID" value="0" required>
+                              <input type="radio" name="alcohol_standard_wd" id="alcohol_standard_wd__ID" value="0" >
                               <span class="checkmark"></span> None
                             </label><br>
                             <label class="radiobuttons">
@@ -198,7 +198,7 @@
                        <h4>Non-workday(s)</h4>
                          <fieldset class="subquestions">
                              <label class="radiobuttons">
-                               <input type="radio" name="alcohol_standard_nwd" id="alcohol_standard_nwd__ID" value="0" required>
+                               <input type="radio" name="alcohol_standard_nwd" id="alcohol_standard_nwd__ID" value="0" >
                                <span class="checkmark"></span> None
                              </label><br>
                              <label class="radiobuttons">
@@ -238,7 +238,7 @@
                              <h4>Workday(s)</h4>
                                <fieldset class="subquestions">
                                    <label class="radiobuttons">
-                                     <input type="radio" name="caffeine_wd" id="caffeine_wd__ID" value="0" required>
+                                     <input type="radio" name="caffeine_wd" id="caffeine_wd__ID" value="0" >
                                      <span class="checkmark"></span> None
                                    </label><br>
                                    <label class="radiobuttons">
@@ -263,7 +263,7 @@
                               <h4>Non-workday(s)</h4>
                                 <fieldset class="subquestions">
                                     <label class="radiobuttons">
-                                      <input type="radio" name="caffeine_nwd" id="caffeine_nwd__ID" value="0" required>
+                                      <input type="radio" name="caffeine_nwd" id="caffeine_nwd__ID" value="0" >
                                       <span class="checkmark"></span> None
                                     </label><br>
                                     <label class="radiobuttons">
@@ -291,10 +291,10 @@
        				 <div class="questiongroup ">
                           <fieldset class="subquestions">
                              <label ><span class=""> &nbsp;&nbsp;Workday(s)</span>
-                                 <input class="form-control" type="number" min=0 max=20 name="caffeine_bed_wd" id="caffeine_bed_wd__ID" placeholder="" required>
+                                 <input class="form-control" type="number" min=0 max=20 name="caffeine_bed_wd" id="caffeine_bed_wd__ID" placeholder="" >
                              </label><br>
                              <label ><span class=""> &nbsp;&nbsp;Non-workday(s)</span>
-                                 <input class="form-control" type="number" name="caffeine_bed_nwd" id="caffeine_bed_nwd__ID" min=0 max=20 placeholder="" required>
+                                 <input class="form-control" type="number" name="caffeine_bed_nwd" id="caffeine_bed_nwd__ID" min=0 max=20 placeholder="" >
                              </label><br>
                            </fieldset>
                        </div>
@@ -318,13 +318,13 @@
           if($("input[name='smoke']:checked").val()=='1'){
               $('#regular_smoke__ID').show() ;
               $('#stopped_smoke__ID').show() ;
-              $('#smoke_regular__ID').prop('required', true);
-              $('#smoke_stop__ID').prop('required', true);
+              $('#smoke_regular__ID').prop('', true);
+              $('#smoke_stop__ID').prop('', true);
               if($("input[name='smoke_regular']:checked").val()=='1'){
                   $('#first_smoke__ID').show();
                   $('#number_smoke__ID').show();
-                  $('#smoke_age__ID').prop('required',true);
-                  $('#smoke_per_day__ID').prop('required',true);
+                  $('#smoke_age__ID').prop('',true);
+                  $('#smoke_per_day__ID').prop('',true);
               }
           }
           else {
@@ -332,23 +332,23 @@
               $('#stopped_smoke__ID').prop('style','display:none!important');
               $('#first_smoke__ID').prop('style','display:none!important');
               $('#number_smoke__ID').prop('style','display:none!important');
-              $('#smoke_regular__ID').prop('required',false);
-              $('#smoke_stop__ID').prop('required',false);
-              $('#smoke_age__ID').prop('required',false);
-              $('#smoke_per_day__ID').prop('required',false);
+              $('#smoke_regular__ID').prop('',false);
+              $('#smoke_stop__ID').prop('',false);
+              $('#smoke_age__ID').prop('',false);
+              $('#smoke_per_day__ID').prop('',false);
           }
       }
       //-------------------------------------
       $("input[name='alcohol']").change(function(){
           if($("input[name='alcohol']:checked").val()=='0'){
               $('#alcohol_drinks__ID').prop('style','display:none!important');
-              $('#alcohol_standard_wd__ID').prop('required', false);
-              $('#alcohol_standard_nwd__ID').prop('required', false);
+              $('#alcohol_standard_wd__ID').prop('', false);
+              $('#alcohol_standard_nwd__ID').prop('', false);
           }
           else {
               $('#alcohol_drinks__ID').show();
-              $('#alcohol_standard_wd__ID').prop('required', true);
-              $('#alcohol_standard_nwd__ID').prop('required', true);
+              $('#alcohol_standard_wd__ID').prop('', true);
+              $('#alcohol_standard_nwd__ID').prop('', true);
           }
       })
       //-------------------------------------
@@ -356,18 +356,18 @@
           if($("input[name='caffeine']:checked").val()=='on'){
               $('#caffeine_drinks__ID').prop('style','display:none!important');
               $('#caffein_bed__ID').prop('style','display:none!important');
-              $('#caffeine_wd__ID').prop('required', false);
-              $('#caffeine_nwd__ID').prop('required', false);
-              $('#caffeine_bed_wd__ID').prop('required', false);
-              $('#caffeine_bed_nwd__ID').prop('required', false);
+              $('#caffeine_wd__ID').prop('', false);
+              $('#caffeine_nwd__ID').prop('', false);
+              $('#caffeine_bed_wd__ID').prop('', false);
+              $('#caffeine_bed_nwd__ID').prop('', false);
           }
           else {
               $('#caffeine_drinks__ID').show();
               $('#caffein_bed__ID').show();
-              $('#caffeine_wd__ID').prop('required', true);
-              $('#caffeine_nwd__ID').prop('required', true);
-              $('#caffeine_bed_wd__ID').prop('required', true);
-              $('#caffeine_bed_nwd__ID').prop('required', true);
+              $('#caffeine_wd__ID').prop('', true);
+              $('#caffeine_nwd__ID').prop('', true);
+              $('#caffeine_bed_wd__ID').prop('', true);
+              $('#caffeine_bed_nwd__ID').prop('', true);
           }
       })
       //-------------------------------------
@@ -375,19 +375,19 @@
           if($("input[name='smoke']:checked").val()=='1'){
               $('#regular_smoke__ID').show() ;
               $('#stopped_smoke__ID').show() ;
-              $('#smoke_regular__ID').prop('required', true);
-              $('#smoke_stop__ID').prop('required', true);
+              $('#smoke_regular__ID').prop('', true);
+              $('#smoke_stop__ID').prop('', true);
               if($("input[name='smoke_regular']:checked").val()=='1'){
                   $('#first_smoke__ID').show();
                   $('#number_smoke__ID').show();
-                  $('#smoke_age__ID').prop('required',true);
-                  $('#smoke_per_day__ID').prop('required',true);
+                  $('#smoke_age__ID').prop('',true);
+                  $('#smoke_per_day__ID').prop('',true);
               }
               else{
                   $('#first_smoke__ID').prop('style','display:none!important');
                   $('#number_smoke__ID').prop('style','display:none!important');
-                  $('#smoke_age__ID').prop('required',false);
-                  $('#smoke_per_day__ID').prop('required',false);
+                  $('#smoke_age__ID').prop('',false);
+                  $('#smoke_per_day__ID').prop('',false);
               }
           }
           else {
@@ -395,24 +395,24 @@
               $('#stopped_smoke__ID').prop('style','display:none!important');
               $('#first_smoke__ID').prop('style','display:none!important');
               $('#number_smoke__ID').prop('style','display:none!important');
-              $('#smoke_regular__ID').prop('required',false);
-              $('#smoke_stop__ID').prop('required',false);
-              $('#smoke_age__ID').prop('required',false);
-              $('#smoke_per_day__ID').prop('required',false);
+              $('#smoke_regular__ID').prop('',false);
+              $('#smoke_stop__ID').prop('',false);
+              $('#smoke_age__ID').prop('',false);
+              $('#smoke_per_day__ID').prop('',false);
           }
       })
       $("input[name='smoke_regular']").change(function(){
           if($("input[name='smoke_regular']:checked").val()=='1'){
               $('#first_smoke__ID').show();
               $('#number_smoke__ID').show();
-              $('#smoke_age__ID').prop('required',true);
-              $('#smoke_per_day__ID').prop('required',true);
+              $('#smoke_age__ID').prop('',true);
+              $('#smoke_per_day__ID').prop('',true);
           }
           else{
               $('#first_smoke__ID').prop('style','display:none!important');
               $('#number_smoke__ID').prop('style','display:none!important');
-              $('#smoke_age__ID').prop('required',false);
-              $('#smoke_per_day__ID').prop('required',false);
+              $('#smoke_age__ID').prop('',false);
+              $('#smoke_per_day__ID').prop('',false);
           }
       })
       //-------------------------------------
