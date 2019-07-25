@@ -108,10 +108,10 @@
                 load2();
                 if($('#ethnicity_10__ID').is(":checked")==true ){
                     $('#specify__ID').show() ;
-                    $('#ethnicity_other__ID').prop('', true);
+                    $('#ethnicity_other__ID').prop('required', true);
                 }
                 else {
-                    $('#ethnicity_other__ID').prop('',false);
+                    $('#ethnicity_other__ID').prop('required',false);
                     $('#specify__ID').hide();
                 }
             }
@@ -119,10 +119,10 @@
             $('#ethnicity_10__ID').on('click', function(){
                 if($('#ethnicity_10__ID').is(":checked")==true ){
                     $('#specify__ID').show() ;
-                    $('#ethnicity_other__ID').prop('', true);
+                    $('#ethnicity_other__ID').prop('required', true);
                 }
                 else {
-                    $('#ethnicity_other__ID').prop('',false);
+                    $('#ethnicity_other__ID').prop('required',false);
                     $('#specify__ID').hide();
                 }
             })
