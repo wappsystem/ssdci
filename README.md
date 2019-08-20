@@ -3,5 +3,5 @@ Screening for sleep disorders and cognitive impairment
 
  
   
-Production:    http://ssdci.wappsystem.com.au  
-Demonstration: http://ssdci.wappsystem.com.au?tb=demo  
+Production:    https://ssdci.wappsystem.com.au  
+Demonstration: https://ssdci.wappsystem.com.au?tb=demo  
