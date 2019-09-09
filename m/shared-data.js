@@ -47,23 +47,40 @@ m.export_records=function(){
                     var o=JSON.parse(data_rec);
                     var fields_ex=m.fields.replace("_Participant_ID","Participant_uid")
                     var export_fields=fields_ex.split(',');
-                    //console.log(JSON.stringify(export_fields))
+                    for (var j=0;j<export_fields.length;j++){
+                        var tmp=export_fields[j].split('|')
+                        if (tmp.length>1) export_fields[j]=tmp[1];
+                    }
                     //Order by m.fields
                     export_fields=export_fields.slice(3,export_fields.length-3);
+                    //console.log(JSON.stringify(export_fields))
                     var oo=JSON.parse(JSON.stringify(o,export_fields));
                     //Create an empty item so download.csv will create all headings
-                    var item={}
-                    for(var i=0;i<export_fields.length;i++){
-                        item[export_fields[i]]="";
-                    }
                     var output_data=[];
-                    for(var i=0;i<participant_rec.length;i++){
-                        for (var k=0;k<oo.length;k++){
-                            if(oo[k].Participant_uid==participant_rec[i].ID){
-                                output_data.push(oo[k]);
-                                break;
+                    for(var ii=0;ii<participant_rec.length;ii++){
+                        if(oo.length>0){
+                            for (var k=0;k<oo.length;k++){
+                                if(oo[k].Participant_uid==participant_rec[ii].ID){
+                                    output_data.push(oo[k]);
+                                    break;
+                                }
+                                if(k==oo.length-1) {
+                                    var item={}
+                                    for(var l=0;l<export_fields.length;l++){
+                                        item[export_fields[l]]="";
+                                    }
+                                    item.Participant_uid=participant_rec[ii].ID;
+                                    output_data.push(item)
+                                }
+                            }    
+                        }
+                        else{
+                            var item={}
+                            for(var l=0;l<export_fields.length;l++){
+                                item[export_fields[l]]="";
                             }
-                            if(k==oo.length-1) {item.Participant_uid=participant_rec[i].ID; output_data.push(item)}
+                            item.Participant_uid=participant_rec[ii].ID;
+                            output_data.push(item)
                         }
                     }
                     var tmp=JSON.stringify(output_data).replace(/Participant_uid/g,"Participant ID")
