@@ -19,6 +19,7 @@ m.load=function(){
     }
 }
 //-------------------------------
+//-------------------------------
 m.export_records=function(){
     tabledata=m.Table;
     m.Table=$vm.module_list['participant-data'].Table;
@@ -32,7 +33,7 @@ m.export_records=function(){
             var len=txt.length;
             n_txt="["+txt.substring(5,len-9)+"]";
             participant_rec=JSON.parse(n_txt);
-            console.log(JSON.stringify(participant_rec))
+            //console.log(JSON.stringify(participant_rec))
             //$vm.download_csv(m.Table+".csv",o);
             close_model__ID();
             m.Table=tabledata;
@@ -51,10 +52,24 @@ m.export_records=function(){
                         var tmp=export_fields[j].split('|')
                         if (tmp.length>1) export_fields[j]=tmp[1];
                     }
+                    //console.log(o[0])
+                    //Add undefined values to first record to get complete records for all entries. 
+                    o.sort(function(a, b) {
+                        return parseFloat(a.Participant_uid) - parseFloat(b.Participant_uid);
+                    });
+                    for (var j=2;j<export_fields.length-3;j++){
+                        //console.log(export_fields[j])
+                        if(export_fields[j].indexOf("_")!=0){
+                            if(o[0][export_fields[j]]==undefined){
+                                o[0][export_fields[j]]="";
+                            }
+                        }
+                    }
                     //Order by m.fields
                     export_fields=export_fields.slice(3,export_fields.length-3);
                     //console.log(JSON.stringify(export_fields))
                     var oo=JSON.parse(JSON.stringify(o,export_fields));
+                    //console.log(JSON.stringify(oo))
                     //Create an empty item so download.csv will create all headings
                     var output_data=[];
                     for(var ii=0;ii<participant_rec.length;ii++){
@@ -91,8 +106,7 @@ m.export_records=function(){
                 }
             });
         }
-    });
-    
+    });    
 }
 //-------------------------------------
 m.cell_render=function(records,I,field,td){
